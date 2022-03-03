@@ -1,0 +1,6 @@
+########
+CRYPTO_LIB = SIKE
+SRC += fips202.c P434.c keccakf1600.c fp_generic.c randombytes.c
+CDEFS += -DSIKE
+VPATH += :$(FIRMWAREPATH)/crypto/$(CRYPTO_LIB)
+EXTRAINCDIRS += $(FIRMWAREPATH)/crypto/$(CRYPTO_LIB)
